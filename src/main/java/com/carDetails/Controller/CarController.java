@@ -37,7 +37,7 @@ public class CarController {
     @PutMapping("/updateCar")
     public Car upadateCar(@RequestBody Car car){
         return service.addCar(car);
-        //return  service.updateCar(car);
+
     }
 
 }
