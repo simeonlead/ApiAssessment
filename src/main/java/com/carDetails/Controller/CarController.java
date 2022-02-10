@@ -36,7 +36,8 @@ public class CarController {
     // Update Car detail
     @PutMapping("/updateCar")
     public Car upadateCar(@RequestBody Car car){
-        return  service.updateCar(car);
+        return service.addCar(car);
+        //return  service.updateCar(car);
     }
 
 }
