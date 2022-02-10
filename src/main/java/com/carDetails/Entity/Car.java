@@ -1,23 +1,40 @@
-package Entity;
+package com.carDetails.Entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Car {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO )
     private Integer id;
 
-    @Column(unique = true)
+    @Column( name = "vin", unique = true)
     private String vin;
+    @Column( name="brand" )
     private String brand;
+
+    @Column( name="year" )
     private Integer year;
+
+    @Column( name="Color" )
     private String Color;
 
     public Car() {
+    }
+
+    public Car(Integer id, String vin, String brand, Integer year, String color) {
+        this.id = id;
+        this.vin = vin;
+        this.brand = brand;
+        this.year = year;
+        Color = color;
+    }
+
+    public Car(String vin, String brand, Integer year, String color) {
+        this.vin = vin;
+        this.brand = brand;
+        this.year = year;
+        Color = color;
     }
 
     public Integer getId() {

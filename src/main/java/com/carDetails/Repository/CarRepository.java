@@ -1,6 +1,6 @@
-package Repository;
+package com.carDetails.Repository;
 
-import Entity.Car;
+import com.carDetails.Entity.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

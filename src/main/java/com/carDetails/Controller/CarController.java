@@ -1,12 +1,11 @@
-package Controller;
+package com.carDetails.Controller;
 
-import Entity.Car;
-import Service.CarService;
+import com.carDetails.Entity.Car;
+import com.carDetails.Service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
 public class CarController {
 
